@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    /* fr - 등분  */
+    /* repeat(5, 1fr) - 1fr이 5번 반복 된다는 뜻 */
+    grid-template-columns: repeat(4, 1fr);
+    /* 첫번째 행 / 2번째 행 */
+    grid-template-rows: 200px 500px;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.grid-item{
+    text-align: center;
+    background-color: aqua;
+}

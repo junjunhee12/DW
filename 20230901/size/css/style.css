@@ -1,0 +1,41 @@
+
+#header{
+    font-size: 32px;
+}
+#header > h2{
+    /* 부모를 기준으로 움직이는 단위 (em) */
+    font-size: 1em; /* 20px * 2 = 40px*/
+}
+.list{
+    font-size: 60px;
+}
+.list li{
+    /* 가장 상단에 있는 (html)부모속성의 폰트사이즈 크기로 만든다.  */
+    font-size: 1rem;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    background-color: gray;
+    border: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 40px;
+    overflow: hidden;
+    color: brown;
+    cursor: pointer;
+    /* transition-duration: all ;
+    transition-duration: 200;
+    transition-timing-function:ease ;  아래가 한번에 줄어준 것이다. */
+    transition: all 500ms;
+}
+.btn-primary{
+    background-color: gold;
+    color: white;
+}
+.btn:hover{
+    background-color: aqua;
+}
+.btn:active{
+    background-color: black;
+}

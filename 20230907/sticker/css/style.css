@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    width: 450px;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 1rem;
+}
+.btn button{
+    flex-basis: calc(100% / 5);
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 0.2rem 1rem;
+    margin: 0.1;
+    height: 50px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    transition: all 2s ease;
+    flex-grow: 1;
+}
+.btn button:nth-child(2n):hover {
+    flex-basis: 40%;
+    background-color: blue;
+}
+.btn button:nth-child(2n-1):hover {
+    flex-basis: 40%;
+    background-color: red;
+}
+

@@ -1,0 +1,106 @@
+/* 전역 변수지정 */
+:root{
+    --size: 50px;
+    --pos: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-fit: cover;
+    padding: 0 1rem;
+    aspect-ratio: 1/1; */
+}
+
+.gallery{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+.gallery-item{
+    flex-basis: calc(100% / 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mig{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    /* object-fit: cover; */
+    height: 100%;
+    position: relative;
+    /* var(--변수명) var = variable */
+    border-radius: var(--size);
+}
+
+.mig .bag{
+    /* 전역변수로 줘도 따로 주어도 된다.  */
+    --size: 30px;
+    position: absolute;
+    background-color: blue;
+    bottom: var(--pos);
+    left: var(--pos);
+    /* padding: 1rem; */
+    border-radius: 50%;
+    font-size: 15px;
+    color: white;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item h2{
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 150px;
+    /* 말 줄임표 */
+    text-overflow: ellipsis;
+}
+/* .container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.content span{
+    width: 36.2px;
+    height: 36.2px;
+    position: absolute;
+    bottom: 45px;
+    left: 25px;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .name{
+    padding-top: 1rem;
+}
+ */

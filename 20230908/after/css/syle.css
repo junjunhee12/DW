@@ -1,0 +1,28 @@
+h1{
+    position: relative;
+    padding: 0 1rem;
+    width: fit-content;
+}
+/* 공톹적인 부분 */
+h1::before,
+h1::after{
+    position: absolute;
+    content: ' " ';
+    width: 20px;
+    height: 100%;
+}
+h1::before{
+    /* position: absolute;
+    top: 0; */
+    left: -10px;
+    /* content: ' " ';
+    width: 20px;
+    height: 100%; */
+}
+h1::after{
+    /* position: absolute;
+    top: 0; */
+    left: 100%;
+    /* content: ' " ';
+    width: 20px; */
+}

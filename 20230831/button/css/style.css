@@ -1,0 +1,23 @@
+
+.btn{
+    display: inline;
+    padding: 30px;
+    background-color: rgb(27, 27, 228,0.5);
+    color: white;
+    border: 2px solid rgb(241, 64, 64);
+    cursor: pointer; 
+    /* 1rem은 16px이다 */
+    /* 1000ms = 1s / transition = 두 가지 상태 사이에 일어나는 변화(애니메이션)를 커스터마이징 할 때 사용한다*/
+    transition: all 0.2s ease;
+}
+/* 버튼에 마우스가 올라가면 바뀌는 역할 */
+.btn:hover{
+    background-color: red;
+    border-radius: 30px;
+}
+
+/* 버튼을 누르면 바뀌는 역할  */
+.btn:active{
+    background-color: yellow;
+    color: black;
+}

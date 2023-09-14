@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background: url('https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb&w=1600') center center;
+    background-size: cover;
+}
+/*  header 부분 */
+/*컨테이너 */
+/* .container{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+} */
+
+/* nav 영역 */
+.nav{
+    /* border-right: 1px solid black; */
+    background-color: rgb(145, 145, 145);
+    width: 100%;
+    max-width: 100%;
+    height: 41px;
+    /* margin: 0 auto; */
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:center;
+    padding: 0 3rem;
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+/* .nav:hover{
+    background-color: white;
+} */
+.nav .dropdwon .dropdown-dep1:hover .dropdown-dep2{
+    width: 200px;
+    background-color: #332d33ea;
+    color: white;
+    border-top: 2px solid rgb(30, 30, 236);
+}
+
+.dropdown-dep1:hover{
+    background-color: #332d33ea;
+    color: white;
+}
+/* dropdown 영역 */
+.dropdwon{
+    /* position:absolute;
+    left: 200px;
+    top: 0; */
+    max-width: 100%;
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    /* position: relative; */
+    /* align-items: center; */
+}
+
+
+/* dropdown-dep1 영역* - 집 / 회사소개 / */
+.dropdown-dep1{
+    overflow: hidden;
+    /* border-right: 1px solid black; */
+    justify-self: center;
+    width: 150px;
+    max-width: 100%;
+    height: 41px;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    /* padding: 0 2rem; */
+    /* margin-right: 1rem; */
+}
+.dropdown-dep1:first-child{
+    /* border-left: 1px solid black; */
+}
+/* .dropdown-dep1에 마우스를 올리면 overflow가 해제되면서 보여지게 된다.  */
+.dropdown-dep1:hover{
+    overflow: visible;
+}
+/* dropdown-dep1-item 영역 */
+.dropdown-dep1-item{
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    /* position: relative; */
+    top: 10px;
+}
+.dropdown-dep1:hover .dropdown-dep2{
+    /* overflow: 0; */
+    transform: translateY(0);
+    opacity: 1;
+}
+/* dropdown-dep2 영역 */
+.dropdown-dep2{
+    border: 1px solid black;
+    border-top: 0;
+    transform: translateY(-50%);
+    /* overflow: hidden; */
+    /* position: absolute;
+    left: 10;
+    top: -200px; */
+    transition: all 1s ease;
+    background-color: white;
+    width: 100px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.6rem;
+}
+
+/* .dropdown-dep2:first-child{
+    border-left: 1px solid black;
+} */
+/* .dropdown-dep2:hover{
+    opacity: 1;
+} */
+/* dropdown-dep2-item 영역 */
+.dropdown-dep2-item{
+
+    /* overflow: hidden; */
+    /* width: 100%;
+    max-width: 100%; */
+    padding: 0.5rem 0;
+}
+/* start 영역 (시작하다) */
+.start{
+    /* position: absolute; */
+    /* width: 150px; */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* content 부분 */
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.right-inner{
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+}
+.container{
+    background-color: rgb(216, 215, 215);
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    /* flex-basis: 50%; */
+    /* padding: 0 1rem; */
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1440px;
+    height: 100vh;
+    flex-basis: 50%;
+}
+
+.inner .content{
+    flex-basis: 50%;
+    
+}
+
+.content{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* .left-content{
+    display: flex;
+    align-items: center;
+    width: 404px;
+    height: 600px;
+    max-width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.right-content{
+    padding-right: 5rem;
+    padding-left: 5rem;
+} */
+
+.header{
+    /* width: 380px; */
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 1rem;
+    width: fit-content;
+    padding: 0.51rem;
+    /* height: 100xp; */
+    /* padding-bottom: 1rem; */
+    /* gap: 1rem */
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.header h3{
+    padding-left: 0.5rem;
+}
+
+.left-inner > .content-body > h1{
+    width: 276px;
+    max-width: 100%;
+    margin: 2rem 0;
+}
+.left-inner > .content-body > p{
+    width: 323px;
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+.right-inner{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 80px;
+    height: 26px;
+    border-radius: 2rem;
+    background-color:rgb(0, 74, 235) ;
+    color: white;
+}
+
+.footer > a{
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    background-color: rgb(0, 74, 235);
+    color: white;
+}
+
+/* background */
+
+/* .bg{
+    background: url('https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb&w=1600') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 650px;
+} */

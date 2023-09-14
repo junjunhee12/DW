@@ -1,0 +1,60 @@
+/* ---------------------------------------------------------
+마지막 자식의 첫번째 와 세번째를 하늘색으로 바꿔준다.
+ul li:nth-child(1),
+ul li:nth-child(3){
+	background-color: skyblue;
+}
+--------------------------------------------------------------*/
+/*
+ 홀수번째를 쓸때는 odd 사용
+ 짝수번째를 쓸때는 even 사용
+*/
+ul li{
+	color:yellow;
+}
+ul li:nth-child(2n-1){
+	background-color: skyblue;
+}
+ul li:nth-child(even){
+	background-color: blue;
+}
+ol li{
+	background-color: yellow;
+	color:red;
+}
+ol li:nth-child(1){
+	color:black;
+}
+
+/* last-child = 중간에 추가되더라도 마지막 자식만 적용,  first-child = 중간에 추가 되더라도 첫번째 자식만 적용*/
+
+ol li:last-child{
+	background-color: green;
+}
+
+ul{
+	border-top:3px solid blue;
+	border-left:3px solid red;
+	border-right:3px solid red;
+	border-bottom:3px solid blue;
+	/*border: solid 3px  black;*/
+
+	/*border-radius: ; 모서리 둥글게 만드러 주는 속성*/
+	/*border-radius:90px;*/
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 120px;
+	/* overflow: hidden - 부모한테 넘쳐나는 것은 가려주는 속성*/
+	overflow: hidden;
+	
+	/* 스타일 속성 -> border-style: dotted; / dashed*/
+}
+
+ol{
+	/*border-radius:30px; 모서리 둥글게 만드러 주는 속성*/
+	border: solid 3px  black;
+	overflow:hidden;
+	border-radius:30px;
+	/* border-style: dotted; / dashed*/
+}

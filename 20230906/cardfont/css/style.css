@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* card */
+.card{
+    width: 275px;
+    height: 365px;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+/* profile image */
+.card-img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.card-img img{
+    height: 100%;
+    object-fit: cover;
+}
+/* card body */
+.card-body{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+/* badges */
+.badges{
+    display: flex;
+    gap: 0.5rem;
+}
+.badge{
+    padding: 0.25rem 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    /* 컨텐츠가 차지한 넓이만큼 줄어든다.*/
+    width: fit-content;
+}
+/* title */
+.title{
+    font-size: 18px;
+}
+
+/* description */
+.desc{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    color: #9e9e9e;
+}
+/* card footer */
+.card-footer{
+    display: flex;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    color: #a0a0a0a0;
+    align-items: center;
+    font-size: 14px;
+}

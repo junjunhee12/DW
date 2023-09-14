@@ -1,0 +1,9 @@
+img{
+    width: 300px;
+    height: 300px;
+    /* border로 테두리 만들기 */
+    border: 2px solid red;
+    padding: 30px;
+    margin: 20px;
+    box-sizing: border-box;
+}

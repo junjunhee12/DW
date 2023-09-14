@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    flex-basis: 100%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.box:nth-child(1){
+    /* order: 2; */
+    background-color: hsl(100,50%,50%);
+}
+
+.box:nth-child(2){
+    background-color: hsl(100,50%,60%);
+}
+
+.box:nth-child(3){
+    /* order: -1; */
+    background-color: hsl(100,50%,70%);
+}
+
+.box:nth-child(4){
+    /* order의 기본값은 0이다.  */
+    /* order: 1; */
+    background-color: hsl(100,50%,80%);
+}
+/* mobile - 640px */
+/* table -768 */
+/*  media query를 안줬을때(모바일)는 기본적으로 width: 0부터 계산하기 시작 */
+/* min-width (최소) 1000px 일때  */
+@media(min-width:1000px){
+    /*.flex > *{
+        color: red;
+    }*/
+    .box{
+        flex-basis: calc(100%/2);
+    }
+}
+
+@media(min-width:1200px){
+    .box{
+        flex-basis: calc(100%/3);
+    }
+    .box:nth-child(2){
+        background-color: red;
+    }
+}
+@media(min-width:1440px){
+    .box{
+        flex-basis: calc(100%/4);
+    }
+    .box:nth-child(3){
+        background-color: orange;
+        color: blue;
+        height: 100vh;
+    }
+}
+
+@media (min-width:360px) and (max-width:640px){
+    .box{
+        background-color: blue !important;
+    }
+}
+/* 화면을 돌렸을 때  */
+@media (orientation: landscape){
+    .box{
+        background-color: red !important;
+    }
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(4, 81, 247);
+}
+#static{
+    background-color: rgb(8, 57, 165);
+    /*  아무 값도 안주면 기본적으로 가지고 있는 값 (정적) */
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+#relative{
+    background-color: rgb(113, 153, 240);
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+#absolute{
+    background-color: rgb(190, 207, 241);
+    /* 부모기준으로 움직인다. 누가 relative를 가지고 있는지 찾는데 못찾으면 계속올라가서 body를 부모로 둔다. / absolute의 부모가 realtive를 가지고 있는가 */
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+#fixed{
+    background-color: hsl(180, 50%, 20%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}

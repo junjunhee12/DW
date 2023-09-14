@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form autocomplete="off">
+        <div>
+            <!-- for 아이디와 같은 이름을 연결해주는 것이다. -->
+            <label for="username">사용자 이름</label>
+            <input id="username" type="text" name="sendname" placeholder="사용자 이름을 작성해주세요">
+        </div>
+        <div>
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" placeholder="비밀번호를 작성해주세요" name="pw">
+        </div>
+        <div>
+            <label for="check">개인정보 사용에 동의하시겠습니까?</label>
+            <input type="checkbox" id="check">
+        </div>
+    
+        <div>
+            <label for="">과일</label>
+            <input type="radio">
+        </div>
+
+        <!-- 레이블 안에 input을 넣은 경우 -->
+        <div>
+            <label>
+                과일
+                <input type="text">
+            </label>
+        </div>
+
+
+        <select name="" id="">
+            <option value="">사과</option>
+            <option value="">오렌지</option>
+            <option value="">수박</option>
+            <option value="" selected>딸기</option>
+        </select>
+        <button type="submit">제출</button>
+    </form>
+
+    
+</body>
+
+</html>

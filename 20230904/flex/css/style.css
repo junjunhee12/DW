@@ -1,0 +1,29 @@
+.flex{
+    /* 자식들을 가로로 정렬 시킨다. */
+    display: flex;
+
+    /*  간격을 줄때 사용한다. (gap) */
+    gap: 10px;
+
+    /* 자식요소의 높이를 부모 높이만큼 stretch상태로 만듭니다. */
+    height: 500px;
+
+    background-color: aqua;
+
+
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    
+}
+.box:nth-child(2){
+    background-color: green;
+}
+.box:nth-child(3){
+    background-color: blue;
+}

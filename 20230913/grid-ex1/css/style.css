@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: grid;
+    
+    grid-template-rows: 50px 50px 1fr 50px 50px;
+    height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.logo,
+.menu,
+.content,
+.sidebar,
+.footer{
+    background-color: dodgerblue;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+@media(min-width:1024px){
+    .main{
+        grid-template-areas:
+        "logo menu menu"
+        "content content content"
+        "sidebar sidebar sidebar"
+        "footer footer footer";
+
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-rows: 100px 1fr 100px 100px;
+    }
+    .logo{
+        grid-area: logo;
+        /* place-items: center; */
+    }
+    .menu{
+        grid-area: menu;
+    }
+    .content{
+        grid-area: content;
+    }
+    .sidebar{
+        grid-area: sidebar;
+    }
+    .footer{
+        grid-area: footer;
+    }
+}
+
+@media(min-width:1200px){
+    .main{
+        grid-template-areas:
+        "logo menu menu"
+        "content content sidebar"
+        /*.을 적으면 윗줄하고 동일한 사이즈 만큼 빠진다.  */
+        "footer footer footer";
+
+        /* 1열 2열 3열 */
+        grid-template-columns: 200px 1fr 300px;
+        /* 1행 2행 3행  */
+        grid-template-rows: 100px 1fr 100px;
+        /* grid-template-rows: 1fr 100px 1fr; */
+
+        .logo{
+            color: black;
+            background-color: yellow;
+            /* place-items: center; */
+        }
+        .sidebar{
+            background-color: red;
+        }
+
+
+    }
+}

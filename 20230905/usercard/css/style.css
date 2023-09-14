@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited{
+    color:inherit;
+    text-decoration: none;
+}
+html, body{
+    font-family: 'GoryeongStrawberry';
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+body{
+    background-color: rgb(194, 203, 211);
+}
+.card{
+    /* flex-wrap: wrap;
+    display: flex;
+    align-items: center; 
+    flex-direction: column */
+    transition: all 1s ease;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem auto 0;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    /* x, y ,blur, spread color */
+    box-shadow: 10px -10px 3px rgb(12, 1, 1, 0.5);
+}
+
+.card:hover{
+    transform: translateY(-5%) rotateY(360deg)  ;
+}
+.card .button:hover .icon{
+    color: white;
+}
+.card .button{    
+    /* display:inline-block; */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+}
+.avatar{
+    width: 128px;
+    height: 128px;
+    border: 3px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card h2{
+    font-size: 20px;
+
+    
+}
+.card p{
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+.card > .user > .button{
+    transition: all 1s ease;
+}
+
+.icon{
+    font-size: 40px;
+    color: blue;
+}
+.card > .user > .button:hover{
+    transform: scale(1.5) rotate(360deg);
+    background-color: black;
+    color: white;
+}
+
+
+/* .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .card h2,
+.card p,
+.card a{
+    margin-top: 10px;
+} */

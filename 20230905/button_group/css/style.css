@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    background-color: aqua;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 10px 10px 3px rgb(12, 1, 1, 0.2);
+
+}
+.buttons .btn{
+    /* width: 100%; */
+    border:0;
+    border-right: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+.buttons .btn:last-child{
+    border-right: 0;
+}
+
+
+
+
+/* .container{
+    display: flex;
+    height: 100vh;
+
+    justify-content: center;
+}
+.container .boxcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    
+}
+
+.container .box{
+    border: 1px solid black;
+    padding: 5px 10px;
+    box-shadow: 10px 10px 3px rgb(12, 1, 1, 0.2);
+    
+}
+
+.container .box:nth-child(2n-1){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px ;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container .box:nth-child(1){
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0 ;
+    border-right: 0;
+}
+.container .box:nth-child(3){
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+}
+.box{
+    background-color: white;
+}
+.container .boxcontainer .box:hover{
+    background-color: blue;
+    color: white;
+} */

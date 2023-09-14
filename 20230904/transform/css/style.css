@@ -1,0 +1,71 @@
+.box{
+    /* 인라인과 블럭의 성격을 모두 가진 속성/ 인라인요소에 width, height값을 적용할 때 활용 */
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: rgb(233, 229, 19);
+}
+#first{
+    background-color: aqua;
+    /* transform: rotate(45deg); - 영역 회전( - 기호도 된다.) / 다른 요소에 영향을 주지 않고 , 혼자서 변형된다.*/
+    /* transform: rotate(45deg); */
+    transition: all 2s ease;
+}
+
+#first:hover{
+    transform: rotate(360deg) translateX(100%);
+    transform-origin: left bottom;
+    margin-left: 100px;
+}
+
+#second{
+    background-color: blueviolet;
+    /* transform: scale(1.5); 화면(영역)이 1.5배 커지게 한다. */
+    /* transform: scale(1.5); */
+    transition: all 2s ease;
+}
+#second:hover{
+    transform: scale(2);
+}
+
+
+#third{
+    background-color: chartreuse;
+    /* transform: skew(30deg, 30deg); 밑에 있는 것을 축약 시킨것이다. */
+    /* transform: skewX(30deg); x방향으로 기울일때  */
+    /* transform: skewY(30deg); y방향으로 기울일때 */
+    transition: all 2s ease;
+}
+
+#third:hover{
+    transform: skew(-65deg, 30deg);
+}
+
+#t1{
+    /* transform: translateX(100%); */
+    transition: all 1s 1s ease;
+}
+#t1:hover{
+    transform: translateX(100%);
+}
+
+#t2{
+    /* transform: translateY(-60px); */
+    transition: all 1s 1s ease-in;
+}
+#t2:hover{
+    transform: translateX(100%);
+}
+
+#t3{
+    /*  transform: translate(x값, y값); */
+    /* transform: translate(100px, 150px); */
+    /* animation/transform을 과하게 많이 사용하면 브라우저가 버벅거릴 수 있다. */
+    /* all / 1s(효과시간) /1s (딜레이 시간) / 움직임 */
+    transition: all 1s 1s cubic-bezier(0.9, -0.47, 0.57, 1.89);
+}
+#t3:hover{
+    transform: translateX(100%);
+}

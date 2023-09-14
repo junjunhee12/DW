@@ -1,0 +1,18 @@
+span{
+	font-size:20px;
+}
+ul{
+	background-color:aliceblue;
+}
+
+ul li{
+	background-color: yellow;
+}
+ul ul{
+	background-color: red;
+}
+ul li ul li{
+	background-color: green;
+}
+
+/* ul > li 자기 자식만 적용하게 해준다. */

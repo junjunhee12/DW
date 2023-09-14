@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited{
+    color:inherit;
+    text-decoration: none;
+}
+
+.list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid black;
+    list-style: none;
+}
+
+.list li{
+    border-right: 1px solid black;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.list li:nth-child(6n){
+    border-right: 0;
+
+}
+.list li:nth-child(n+13){
+    border-bottom: 0;
+}
+.list li .overlay{
+    position: absolute;
+    background-color: dodgerblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+}
+
+.list li:hover .overlay{
+    opacity: 1;
+}
+
+.overlay span{
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    
+}
+
+.overlay span:first-child{
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+    border-right: 1px solid #ddd;
+}
+
+.overlay span:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}

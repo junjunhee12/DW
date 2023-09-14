@@ -1,0 +1,48 @@
+
+table{
+	border:1px solid black;
+	border-collapse: collapse;
+}
+
+table tfoot{
+	border-top: 1px solid black;
+}
+table thead{
+	border-bottom: 1px solid black;
+}
+table tbody tr:nth-child(2n-1){
+	background-color:red;
+}
+/*
+table tbody td:first-child{
+	border-right:1px solid black;
+}
+table thead th:first-child{
+	border-right:1px solid black;
+}
+table tfoot td:first-child{
+	border-right:1px solid black;
+
+}
+table th td:nth-child(2),
+table th{
+	border-right:1px solid black;
+}
+*/
+table th,
+table td{
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+	
+	
+}
+table td:last-child{
+	/* 수평정렬 -> 아래는 텍스트(글씨) 우측정렬*/
+	text-align: right;
+	/* 수직 정렬 - middle, bottom, top*/
+	vertical-align:top;
+}
+table thead th{
+	width: 100px;
+	text-align: left;
+}

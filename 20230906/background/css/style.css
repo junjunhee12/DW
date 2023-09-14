@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-image: url('https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    width: 100vw;
+    height: 100vh;
+    /* 반복 */
+    /* background-repeat: repeat-x; */
+    /* 반복하지 않음 */
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    background-position: center;
+    /* background-size: 120% 50%; */
+    /* background-size: 100%; */
+    /* 가장 많이 사용한다. 비율 유지한채로 이미지를 꽉채움 */
+    background-size: cover;
+
+    /* background-size: cover;
+    background-attachment: fixed;
+    height: 650px; */
+}

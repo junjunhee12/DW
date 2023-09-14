@@ -1,0 +1,29 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+#rect{
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: #babaf7;
+    border: 10px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    overflow: auto;
+}
+.box{
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: hsl(66, 100%, 51%);
+    /* border: 20px solid transparent; */
+    border: 20px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    overflow: auto;
+}
+

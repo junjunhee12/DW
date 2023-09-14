@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 300px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    transition: all 2s ease;
+    
+}
+img:hover{
+    
+    transform: scale(1.5);
+}
+.card-img{
+    max-width: 300px;
+    max-height: 250px;
+    overflow: hidden;
+}
+/* card 전체부분 */
+.card{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    
+}
+.bighead1{
+    display: flex;
+}
+.bighead2{
+    display: flex;
+}
+/* cardhead 각 카드 부분 */
+.cardhead{
+    border: 1px solid black;
+    width: fit-content;
+    margin: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+h2{
+    color: rgb(11, 124, 230);
+}
+.menu1,
+.menu2{
+    /* font-size: 14px; */
+    padding-left: 1rem;
+}
+
+.position{
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.card-body{
+    padding: 1rem 0 ;
+}

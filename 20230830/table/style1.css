@@ -1,0 +1,22 @@
+table{
+	border:1px solid black;
+	border-collapse: collapse;
+}
+
+table thead tr{
+	border-bottom:1px solid black;
+}
+table tbody td,
+table tbody th{
+	border-top:1px solid black;
+	border-right:1px solid black;
+	text-align:right;
+}
+table tbody th:first-child{
+	text-align:left;
+}
+table tbody tr:nth-child(2n){
+	background-color:skyblue;
+	text-align:right;
+	vertical-align:top;
+}
