@@ -11,36 +11,32 @@ img{
     object-fit: cover;
 }
 
-.container{
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-}
-
-.page{
-    height: 100vh;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-}
-
-.page:nth-child(2n){
-    background-color: gray;
-    flex-direction: row-reverse;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1rem;
-    flex-basis: 50%;
-}
-
-figure{
-    flex-basis: 50%;
+html, body{
     width: 100%;
     height: 100%;
 }
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(even){
+    flex-direction: row-reverse;
+    background-color: lightgray;
+}
+figure{
+    height: 100%;
+    flex-basis: 50%;
+}
+.content{
+    flex-basis: 50%;
+    font-size: 20px;
+    padding: 3rem;
+}
+.content h2{
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+
