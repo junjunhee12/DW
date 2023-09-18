@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(even){
+    flex-direction: row-reverse;
+    background-color: lightgray;
+}
+figure{
+    height: 100%;
+    flex-basis: 50%;
+}
+.content{
+    flex-basis: 50%;
+    font-size: 20px;
+    padding: 3rem;
+}
+.content h2{
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+
