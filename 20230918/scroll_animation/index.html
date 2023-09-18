@@ -38,7 +38,7 @@
     </section>
 
     <section>
-        <figure>
+        <figure data-aos="fade-left">
             <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt="">
         </figure>
@@ -51,10 +51,8 @@
     </section>
 
     <section>
-        <figure>
-            <img data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000" src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        <figure data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="1000">
+            <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt="">
         </figure>
         <div class="content">
@@ -67,7 +65,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+
     </script>
 </body>
 
