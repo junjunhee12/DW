@@ -9,6 +9,12 @@ const container = document.querySelector('.container')
 console.log(container)
 //버튼 클랙했을 때 컨테이너에 bg 클래스를 추가한다.
 button.addEventListener('click', ()=>{
+    if(container.style.backgroundColor = 'white'){
+        container.style.backgroundColor = 'blue'
+    }
+    else if(container.style.backgroundColor = 'blue'){
+        container.style.backgroundColor = 'white'
+    }
     container.classList.add('bg');
 })
 
