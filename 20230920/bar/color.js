@@ -47,3 +47,4 @@ minus.addEventListener('click', () => {
         // color.style.backgroundColor = `hsl(${value}, 50%, 50%)`
     }
 })
+
