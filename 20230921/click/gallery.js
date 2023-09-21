@@ -43,6 +43,14 @@ for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', () => {
         image.src = data[i].url
         title.textContent = data[i]["title"]
+        for(let j = 0; j < button.length; j++){
+            button[j].classList.remove('check')
+        }
+        button[i].classList.add('check')
+        // 
     })
+    
+    // 
 }
+
 
