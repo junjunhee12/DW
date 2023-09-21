@@ -39,6 +39,8 @@ const title = document.querySelector('#title')
 
 
 for (let i = 0; i < button.length; i++) {
+    button[0].classList.add('check')
+    title.textContent =data[0].title
     // console.log(button[i])
     button[i].addEventListener('click', () => {
         image.src = data[i].url
