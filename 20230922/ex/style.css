@@ -17,7 +17,7 @@ html,body{
     width: 320px;
     height: 100vh;
     top:0;
-    left:-320px;
+    right: -320px;
     background-color:white;
     transition: all 500ms cubic-bezier(1, 0, 0, 1);
     padding: 1rem;
@@ -32,7 +32,7 @@ html,body{
     top:0;
     width: 48px;
     height: 48px;
-    right:-48px;
+    left:-48x;
     background-color: black;
     color: white;
     border: 0;
