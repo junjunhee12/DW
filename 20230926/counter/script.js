@@ -31,11 +31,10 @@ dataList.forEach(item => {
     const timerText = item.querySelector('.timer')
     const step = Math.floor(target / 200)
     setInterval(() => {
-        if (index < target) {
-
-                        index = index + step;
-                        // console.log(index)
-                        timerText.textContent = index
-                    }
+        if (index < target) { 
+            index = index + step;
+            // console.log(index)
+            timerText.textContent = index
+        }
     })
 })
