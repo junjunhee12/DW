@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b) {
+        var sum = a + b;
+        return sum;
+      }
+      function sub(a, b) {
+        var res = a - b;
+        return res;
+      }
+      // window.onlode - html 작성이 되고나면 스크립트를 실행
+      window.onload = function () {
+        var sum = add(4, 5);
+        document.write("add=" + sum + "<br/>");
+        var res = sub(10, 4);
+        document.write("sub=" + res);
+      };
+    </script>
+  </body>
+</html>

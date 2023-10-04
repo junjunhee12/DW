@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function add(a, b) {
+      //     let sum = a + b;
+      //   }
+      //   function sub(a, b) {
+      //     let res = a - b;
+      //   }
+      //   // window.onlode - html 작성이 되고나면 스크립트를 실행
+      //   window.onload = function () {
+
+      //     add(4, 5);
+      //     document.write("add=" + sum);
+      //     sub(10, 4);
+      //     document.write("sub=" + res);
+      //   };
+
+      var sum = 0;
+      function add(a, b) {
+        sum = a + b;
+      }
+      function sub(a, b) {
+        sum = a - b;
+      }
+      window.onload = function () {
+        add(4, 5);
+        document.write("add=" + sum + "<br/>");
+        sub(10, 4);
+        document.write("sub=" + sum);
+      };
+    </script>
+  </body>
+</html>
