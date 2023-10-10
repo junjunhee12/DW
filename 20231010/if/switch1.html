@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스위치문 연습</title>
+  </head>
+  <body></body>
+  <!-- <script>
+    let grade = prompt("성적을 입력하세요");
+
+    switch (true) {
+      case grade >= 90 && grade <= 100:
+        document.write("A");
+        break;
+      case grade >= 80 && grade <= 89:
+        document.write("B");
+        break;
+      case grade >= 70 && grade <= 79:
+        document.write("C");
+        break;
+      case grade >= 60 && grade <= 69:
+        document.write("D");
+        break;
+      case grade >= 0 && grade <= 59:
+        document.write("F");
+        100;
+        break;
+      default:
+        document.write("알수없는 학점입니다.");
+        break;
+    }
+  </script> -->
+
+  <script>
+    let grade = prompt("성적을 입력하세요");
+
+    switch (parseInt(grade / 10)) {
+      case 10:
+      case 9:
+        document.write("A");
+        break;
+      case 8:
+        document.write("B");
+        break;
+      case 7:
+        document.write("C");
+        break;
+      case 6:
+        document.write("D");
+        break;
+      default:
+        document.write("F");
+        break;
+    }
+  </script>
+</html>

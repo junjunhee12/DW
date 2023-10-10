@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // const res1 = prompt("첫번째 사람");
+
+    // const res2 = prompt("두번째 사람");
+
+    // switch (true) {
+    //   case res1 === "가위" && res2 === "가위":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(" 결과는 비겼습니다.");
+    //     break;
+    //   case res1 === "가위" && res2 === "바위":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(`결과는 두번째 사람이 이겼습니다.`);
+    //     break;
+    //   case res1 === "가위" && res2 === "보":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(`결과는 첫번째 사람이 이겼습니다.`);
+    //     break;
+    //   // res1 = 바위 일때
+    //   case res1 === "바위" && res2 === "가위":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(" 결과는 첫번째 사람이 이겼습니다");
+    //     break;
+    //   case res1 === "바위" && res2 === "바위":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(`결과는 비겼습니다.`);
+    //     break;
+    //   case res1 === "바위" && res2 === "보":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(`결과는 두번째 사람이 이겼습니다.`);
+    //     break;
+    //   // res1 = 보일때
+    //   case res1 === "보" && res2 === "가위":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(" 결과는 두번째 사람이 이겼습니다.");
+    //     break;
+    //   case res1 === "보" && res2 === "바위":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(`결과는 첫번째 사람이 이겼습니다.`);
+    //     break;
+    //   case res1 === "보" && res2 === "보":
+    //     document.write(`첫번째 사람:${res1}<br/>`);
+    //     document.write(`두번째 사람:${res2}<br/>`);
+    //     document.write(`결과는 비겼습니다.`);
+    //     break;
+    //   default:
+    //     break;
+    // }
+
+    // 가위 1 , 바위 2, 보 3
+    // 이기는 경우 가위(1) - 보(3), 바위(2) -가위(1), 보(3) - 바위(2)
+    // 지는 경우 가위(1) - 바위(2), 바위(2) - 보(3), 보(3) - 가위(1)
+    // 비기는 경우
+
+    // 선생님 코드
+    // let userInput1 = prompt("가위(1), 바위(2), 보(3)를 입력해주세요", "ex) 2");
+    // let userInput2 = prompt("가위(1), 바위(2), 보(3)를 입력해주세요", "ex) 2");
+
+    // let str1 = "";
+    // let str2 = "";
+    // if (userInput1 == 1) {
+    //   str1 = "가위";
+    // } else if (userInput2 == 2) {
+    //   str1 = "바위";
+    // } else {
+    //   str1 = "보";
+    // }
+
+    // if (userInput2 == 1) {
+    //   str2 = "가위";
+    // } else if (userInput2 == 2) {
+    //   str2 = "바위";
+    // } else {
+    //   str2 = "보";
+    // }
+
+    // switch (userInput1 - userInput2) {
+    //   case -2:
+    //   case 1:
+    //     document.write("첫번째 사람 :" + str1 + "<br/>");
+    //     document.write("두번째 사람 :" + str2 + "<br/><br/>");
+    //     document.write("결과: 첫번째 사람 승");
+    //     break;
+
+    //   case -1:
+    //   case 2:
+    //     document.write("첫번째 사람 :" + str1 + "<br/>");
+    //     document.write("두번째 사람 :" + str2 + "<br/><br/>");
+    //     document.write("결과: 두번째 사람 승");
+    //     break;
+
+    //   case 0:
+    //     document.write("첫번째 사람 :" + str1 + "<br/>");
+    //     document.write("두번째 사람 :" + str2 + "<br/><br/>");
+    //     document.write("결과: 무승부");
+    //     break;
+
+    //   default:
+    //     document.write("잘못입력");
+    //     break;
+    // }
+  </script>
+</html>
