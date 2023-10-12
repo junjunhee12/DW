@@ -21,14 +21,17 @@
     // }
 
     // 1 ~ 5까지 합
+    //각각의 i 값의 합을 1부터 5까지 문자열로 표현
     sum = 0;
-
+    let str = " ";
     for (let i = 1; i <= 5; i++) {
-      //   box = i + 1;
       sum += i;
-      for (let j = 1; j <= 5; j++) {
-        document.write(i + "+" + j + " = " + i + "<br/>");
+      if (i === 1) {
+        str += i;
+      } else {
+        str += " + " + i;
       }
+      document.write(str + " = " + sum + "<br/>");
     }
     // document.write(i + "+" + box + " = " + sum);
     // document.write(i + "+" + sum + " = ");

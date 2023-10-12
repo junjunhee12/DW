@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //1부터 100까지
+    document.write("<h1> 1부터 100까지 </h1>");
+    for (let i = 1; i <= 100; i++) {
+      document.write(i + "&nbsp");
+    }
+
+    document.write("<h1> 10부터 1까지 </h1><hr/>");
+
+    // 10부터 1까지
+    for (let i = 10; i >= 1; i--) {
+      document.write(i + "&nbsp");
+    }
+
+    // 0부터 10까지 짝수만 출력
+    document.write("<h1> 0부터 10까지 짝수만 출력 </h1><hr/>");
+    for (let i = 0; i <= 10; i++) {
+      if (i % 2 == 0) {
+        document.write(i + "&nbsp");
+      }
+    }
+
+    // 1부터 100까지 짝수만 출력
+    document.write("<h1> 1부터 100까지 짝수의 합을 출력</h1><hr/>");
+    let sum = 0;
+    for (let i = 0; i <= 100; i += 2) {
+      sum += i;
+    }
+    document.write(sum);
+
+    // 별찍기
+    document.write("<h1> 별찍기 (직각사각형)</h1><hr/>");
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (직각삼각형)</h1><hr/>");
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j <= i; j++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (직각삼각형 - 오른쪽)</h1><hr/>");
+    // let str = "";
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 5; j > i; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 1; k <= i; k++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (역삼각형 - 왼쪽)</h1><hr/>");
+    for (let i = 0; i < 5; i++) {
+      for (let j = 5; j > i; j--) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (역삼각형 - 오른쪽)</h1><hr/>");
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 5; k >= i; k--) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (정삼각형)</h1><hr/>");
+
+    for (let i = 0; i < 5; i++) {
+      for (let j = 5; j > i; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k <= i; k++) {
+        document.write("*");
+      }
+      for (let q = 0; q < i; q++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = 5; j > i; j--) {
+    //     document.write("&nbsp;");
+    //   }
+    //   for (let k = 1; k <= i; k++) {
+    //     document.write("*");
+    //   }
+    //   for (let j = 1; j < i; j++) {
+    //     document.write("*");
+    //   }
+    //   document.write("<br/>");
+    // }
+  </script>
+</html>
