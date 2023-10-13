@@ -87,29 +87,83 @@
     document.write("<h1> 별찍기 (정삼각형)</h1><hr/>");
 
     for (let i = 0; i < 5; i++) {
-      for (let j = 5; j > i; j--) {
+      for (let j = 4; j > i; j--) {
         document.write("&nbsp;");
       }
-      for (let k = 0; k <= i; k++) {
+      for (let k = 1; k <= i; k++) {
         document.write("*");
       }
-      for (let q = 0; q < i; q++) {
+      for (let q = 0; q <= i; q++) {
         document.write("*");
       }
       document.write("<br/>");
     }
 
-    // for (let i = 1; i <= 5; i++) {
-    //   for (let j = 5; j > i; j--) {
-    //     document.write("&nbsp;");
-    //   }
-    //   for (let k = 1; k <= i; k++) {
-    //     document.write("*");
-    //   }
-    //   for (let j = 1; j < i; j++) {
-    //     document.write("*");
-    //   }
-    //   document.write("<br/>");
-    // }
+    for (let i = 0; i < 5; i++) {
+      for (let j = 4; j > i; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k <= i * 2; k++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (역정삼각형)</h1><hr/>");
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 5; k >= i; k--) {
+        document.write("*");
+      }
+      for (let j = 5; j > i; j--) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+
+    for (let i = 0; i <= 5; i++) {
+      for (let j = 0; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 8; k >= i * 2; k--) {
+        document.write("*");
+      }
+
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 별찍기 (마름모)</h1><hr/>");
+    for (let i = 0; i < 5; i++) {
+      for (let j = 4; j > i; j--) {
+        document.write("&nbsp;");
+      }
+      for (let k = 0; k <= i * 2; k++) {
+        document.write("*");
+      }
+      document.write("<br/>");
+    }
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 0; j < i; j++) {
+        document.write("&nbsp;");
+      }
+      for (let k = 8; k >= i * 2; k--) {
+        document.write("*");
+      }
+
+      document.write("<br/>");
+    }
+
+    document.write("<h1> 마름모 별 찍기 다른 방법(repeat 함수이용)</h1><hr/>");
+    // 문자열.repeat(반복횟수)
+    // document.write("*".repeat(5));
+
+    for (let i = 1; i <= 5; i++) {
+      document.write("&nbsp;".repeat(5 - i) + "*".repeat(2 * i - 1) + "<br/>");
+    }
+    for (let j = 4; j >= 1; j--) {
+      document.write("&nbsp;".repeat(5 - j) + "*".repeat(2 * j - 1) + "<br/>");
+    }
   </script>
 </html>
