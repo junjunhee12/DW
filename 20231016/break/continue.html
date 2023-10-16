@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var msg = "";
+    for (let i = 0; i < 10; i++) {
+      if (i == 5) {
+        continue;
+      }
+      msg += i + "<br/>";
+    }
+    document.write(msg);
+    document.write("<hr/>");
+
+    let i = 0;
+    while (true) {
+      document.write(i + "<br/>");
+      i++;
+      if (i == 5) {
+        continue;
+      }
+      if (i == 10) {
+        break;
+      }
+    }
+
+    document.write("<hr/>");
+
+    let sum = 0;
+    for (let i = 1; i <= 200; i++) {
+      if (i % 2 == 1) {
+        continue;
+      }
+      sum += i;
+    }
+    document.write(`sum : ${sum}`);
+    document.write("<hr/>");
+
+    let sum1 = 0;
+    while (true) {
+      num = parseInt(prompt("정수를 입력하세요"));
+      sum1 += num;
+      if (num === 0) {
+        break;
+      }
+    }
+    document.write(sum1);
+  </script>
+</html>

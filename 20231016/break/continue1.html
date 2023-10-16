@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let sum1 = 0;
+    // while (true) {
+    //   num = parseInt(prompt("정수를 입력하세요"));
+    //   sum1 += num;
+    //   if (num === 0) {
+    //     break;
+    //   }
+    // }
+    // document.write(sum1);
+
+    // for (let i = 1; i <= 10; i++) {
+    //   for (let k = 1; k <= 10; k++) {
+    //     sum = i + k;
+    //     if (sum % 3 === 0) {
+    //       document.write(`i값: ${i} + k값:  ${k} = ${sum} (3의 배수) <br/>`);
+    //     }
+    //   }
+    // }
+
+    // document.write("<hr/>");
+    // for (let i = 1; i <= 10; i++) {
+    //   for (let k = 1; k <= 10; k++) {
+    //     if ((i + k) % 3 !== 0) {
+    //       continue;
+    //     }
+    //     document.write(`i값: ${i} , k값:  ${k}  결과 :  ${i + k}  <br/>`);
+    //   }
+    // }
+    // document.write("<hr/>");
+
+    // for (let i = 1; i <= 100; i++) {
+    //   if (i % 2 == 0 && i % 3 === 0) {
+    //     document.write(`2의 배수이면서 3의 배수 ${i}<br/>`);
+    //   }
+    // }
+
+    while (true) {
+      let num1 = +prompt("숫자를 입력");
+      let num2 = +prompt("숫자를 입력");
+      if (num1 + num2 >= 100) {
+        document.write(
+          `첫번째 수 : ${num1}, 두번째 수 : ${num2}, 합 : ${num1 + num2}`
+        );
+      } else if (num1 == 0 && num2 == 0) {
+        break;
+      } else {
+        continue;
+      }
+    }
+  </script>
+</html>
