@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+figure {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+figure > p {
+  max-width: 100%;
+  width: 100%;
+  padding: 3rem 0;
+}
+.main {
+  text-align: center;
+  padding: 1rem;
+}
+.container {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  web shoppig 영역 */
+header {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 1rem; */
+  padding: 0 1rem;
+}
+header .content {
+  max-width: 100%;
+  width: 100%;
+  background-color: pink;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+.nav-content {
+  max-width: 100%;
+  width: 100%;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.main-content {
+  max-width: 100%;
+  width: 100%;
+  height: 760px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  /* margin: 0 auto; */
+}
+section {
+  /* padding: 1rem; */
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.section {
+  max-width: 100%;
+  width: 100%;
+  height: 728px;
+  border-radius: 1rem;
+  background-color: gray;
+  /* margin: 1rem; */
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  max-width: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card > p {
+  font-size: 12px;
+}
+.left {
+  max-width: 100%;
+  width: 300px;
+  height: 728px;
+  border-radius: 1rem;
+  background-color: rgb(240, 155, 169);
+}
+.left-item {
+  height: 728px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+.left-item > h2 {
+  padding: 1rem 0;
+}
+.left-dep {
+  max-width: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 113, 133);
+}
+.left-dep > li {
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+}
+
+.right {
+  max-width: 100%;
+  width: 300px;
+  height: 728px;
+  padding: 1rem;
+  background-color: dodgerblue;
+  border-radius: 1rem;
+}
+
+footer {
+  max-width: 100%;
+  width: 100%;
+  /* height: 50px; */
+  /* margin: 0 1rem; */
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > p {
+  max-width: 100%;
+  width: 100%;
+  /* height: 50px; */
+  background-color: aquamarine;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}

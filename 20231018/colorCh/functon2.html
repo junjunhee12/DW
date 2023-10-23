@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" placeholder="이름 입력하는 곳" />
+    <button onclick="cilckFunc()">Click</button>
+    <p id="greeting"></p>
+
+    <!-- <div id="name"></div> -->
+  </body>
+  <script>
+    // window.onloade =function(){
+
+    // }
+    const cilckFunc = function () {
+      const inputVal = document.querySelector("#input");
+      document.querySelector("#greeting").innerHTML = inputVal.value;
+      inputVal.value = "";
+    };
+  </script>
+</html>
