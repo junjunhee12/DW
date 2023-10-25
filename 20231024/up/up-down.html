@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자맟주기 게임</title>
+  </head>
+  <body>
+    <h1>Number Gu</h1>
+    <p>1부터 100사이의 숫자를 입력하시오</p>
+    <input type="text" id="number" />
+    <button type="button" onclick="test()">숫자추측</button>
+    <p id="message"></p>
+
+  </body>
+  <script>
+    let randNum = 0;
+    let count = 0;
+    const MAX_COUNT = 5;
+    const message = document.querySelector("#message");
+    function getRandom() {
+      randNum = parseInt(Math.random() * 100 + 1);
+    }
+    function reset() {
+      count = 0;
+      getRandom();
+    }
+    function test() {
+      const input = document.querySelector("#input");
+      if (randNum == input.value) {
+        alert(`게임에서 승리하셨습니다. 컴퓨터의 숫자 ${randNum}`);
+        reset();
+        message.innerHTML = "";
+        input.value = "";
+      } else {
+        count++;
+
+        let upDown = "";
+        if (input.value > randNum) {
+          message.innerHTML = `입력하신 숫자보다 작습니다. 입력하신 숫자: ${input.value}`;
+        } else if (input.value < randNum) {
+          message.innerHTML = `입력하신 숫자보다 큽니다. 입력하신 숫자: ${input.value}`;
+        }
+        if (count == MAX_COUNT) {
+          alert(`게임에서 패배하셨습니다. 컴퓨터의 숫자 ${randNum}`);
+          reset();
+        }
+      }
+    }
+    getRandom();
+  </script>
+</html> -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자맞추기 게임</title>
+  </head>
+  <body>
+    <h1>Number Guess</h1>
+    <p>1부터 100 사이의 숫자를 입력하시오.</p>
+    <input id="number" type="text" />
+    <button type="button" onclick="test()">숫자 추측</button>
+    <p id="message"></p>
+  </body>
+  <script>
+    let randNum = 0;
+    let count = 0;
+    const MAX_COUNT = 5;
+    const message = document.querySelector("#message");
+    function getRandom() {
+      randNum = parseInt(Math.random() * 100 + 1);
+    }
+    function reset() {
+      count = 0;
+      getRandom();
+    }
+    function test() {
+      const input = document.querySelector("#number");
+      count++;
+      if (randNum == input.value) {
+        alert(`게임에서 승리하셨습니다. 숫자 : ${randNum}`);
+        reset();
+        message.innerHTML = "";
+        input.innerHTML = "";
+      } else {
+        count++;
+
+        if (randNum > input.value) {
+          message.innerHTML = "up";
+        } else if (randNum < input.value) {
+          message.innerHTML = "down";
+        }
+
+        if (randNum == MAX_COUNT) {
+          alert(`게임에서 패배하셨습니다. 숫자 : ${randNum}`);
+          reset();
+        }
+      }
+    }
+
+    getRandom();
+  </script>
+</html>
