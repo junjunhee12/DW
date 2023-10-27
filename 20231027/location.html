@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p onclick="moveTopage()">이동하기</p>
+    <p onclick="pageRelode()">새로고침</p>
+  </body>
+  <script>
+    function moveTopage() {
+      location.href = "https://www.google.com";
+    }
+    function pageRelode() {
+      location.reload();
+    }
+  </script>
+</html>

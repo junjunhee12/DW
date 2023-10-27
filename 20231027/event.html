@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        background-color: yellow;
+        height: 200px;
+        font-size: 30px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="pTag">이벤트 리스너 테스트</p>
+    <input id="inputTag" type="text"></input>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />r><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />r><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />r><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+  <script>
+    // 이벤트 리스너(event listener) -> 이벤트 리스너란 이벤트가 발생했을 때 그 처리를 담당하는 함수르 가리키며, 이벤트 핸들러라고도 한다. 지정된 타입의 이벤트가 특정 요소에서 발생하면, 특정요소에 등록된 이벤트 리스너를 실행시킨다.
+
+    // ** 이벤트 리스너 등록 방법 **
+    // 1. HTML 태그에 속성으로 등록 / 2. 자바스크릅트에서 프로퍼티로 등록 /
+
+    // addEventListener()함수 사용
+    //  대상객체.addEventListener( 이벤트명, 실행할 이벤트리스너, 이벤트전파방식)
+    const pTag = document.getElementById("pTag");
+    // pTag.addEventListener("click", () => {
+    //   alert("클릭이벤트 발생");
+    // });
+
+    //dblclick
+    // pTag.addEventListener("dblclick", () => {
+    //   alert("dbl클릭이벤트 발생");
+    // });
+
+    // mousedown - 마우스를 누르고 있을 때
+    // pTag.addEventListener("mousedown", () => {
+    //   alert("mousedown이벤트 발생");
+    // });
+
+    //mouseup - 눌렀던 마우스 버튼을 뗄 때
+    // pTag.addEventListener("mouseup", () => {
+    //   alert("mouseup이벤트 발생");
+    // });
+
+    // mousemove - 마우스를 움직였을 때
+    // pTag.addEventListener("mousemove", () => {
+    //   alert("mousemove이벤트 발생");
+    // });
+
+    // mouseover - 마우스 해당 요소 바깥에서 안으로 옮겼을 때
+    // pTag.addEventListener("mouseover", () => {
+    //   alert("mouseover이벤트 발생");
+    // });
+
+    //mouseout - 마우스 해당 요소 안에서 밖으로 옮겼을 때
+    // pTag.addEventListener("mouseout", () => {
+    //   alert("mouseout이벤트 발생");
+    // });
+
+    // contextmenu - 마우스 오른쪽 버튼을 눌렀을 때
+    // pTag.addEventListener("contextmenu", (event) => {
+    //   event.preventDefault(); // 기존 이벤트를 막는 역할
+    //   alert("마우스 우클릭이 방지된 사이트 입니다.(이벤트 발생)");
+    // });
+
+    // UI 이벤트
+    // load
+    // window.addEventListener("load", () => {
+    //   alert("load이벤트 발생");
+    // });
+
+    // resize
+    // window.addEventListener("resize", () => {
+    //   alert("resize이벤트 발생");
+    // });
+
+    // scroll
+    // window.addEventListener("scroll", () => {
+    //   alert("scroll이벤트 발생");
+    // });
+    
+
+    // 키보드 이벤트
+    // keydown - 사용자가 키를 처음 눌렀을 때
+    const inputTag = document.getElementById("inputTag")
+
+    // inputTag.addEventListener("keydown", (event)=>{
+    //     // event.preventDefault();
+    //     if(event.keyCode == 229){
+    //         inputTag.value.replace(/[가-힣]/g, "")
+    //         // alert("한글 입력")
+    //     }
+    //     console.log(`key: ${event.key}, code : ${event.code}`);
+    // })
+
+    //keyup - 사용자가 키를 뗼 때
+    inputTag.addEventListener("keyup", (event)=>{
+
+            inputTag.value = inputTag.value.replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, "")
+            console.log(`key: ${event.key}, code : ${event.code}`);
+            // alert("한글 입력")
+
+        // alert("keyup이벤트 발생")
+    })
+
+    // keypress - 사용자가 눌렀던 키의 문자가 입력되었을 때
+    // inputTag.addEventListener("keypress", (event)=>{
+    //     alert("keypress이벤트 발생")
+    // })
+
+    // 실행 순서 - keydown keypress keyup
+
+    // 포커스 이벤트
+    // focus- 요소가 포커스를 얻었을 때
+        inputTag.addEventListener('focus', ()=>{
+            alert("focus 이벤트 발생")
+        })
+  </script>
+</html>

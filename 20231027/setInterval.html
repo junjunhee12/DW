@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>버튼을 누르면 문가 계속해서 화면에 표시됩니다.</p>
+    <button onclick="Interver()">START</button>
+    <button onclick="stopInterver()">STOP</button>
+  </body>
+  <script>
+    let printPtag;
+    function Interver() {
+      console.log("실행전");
+      printPtag = setInterval(function () {
+        // const pTag = document.createElement("p");
+        let backgroundArr = []; // bakcground값을 담을 배열
+        let colorArr = []; // color 값을 담을 배열
+        for (let i = 0; i < 2; i++) {
+          for (let j = 0; j < 3; j++) {
+            if (i == 0) {
+              backgroundArr.push(parseInt(Math.random() * 256));
+            } else {
+              colorArr.push(parseInt(Math.random() * 256));
+            }
+          }
+        }
+        const pTag = document.querySelector("p");
+        pTag.style.backgroundColor = `rgb(${backgroundArr.toString()})`;
+        pTag.style.color = `rgb(${colorArr.toLocaleString()})`;
+        // document.body.appendChild(pTag); // p 태그를 body에 추가
+      }, 100);
+    }
+    function stopInterver() {
+      // 정지하는 함수
+      clearInterval(printPtag);
+    }
+  </script>
+</html>
