@@ -15,7 +15,33 @@
   </head>
   <body>
     <p id="pTag">이벤트 리스너 테스트</p>
-    <input id="inputTag" type="text"></input>
+    <form action="...">
+      <input id="inputTag" type="text" class="formEl"></input><br>
+      <textarea id="textarea" cols="25" rows="5" class="formEl"></textarea><br>
+      <select name="" id=""  class="changeTest">
+        <option value="">현대</option>
+        <option value="" selected>기아</option>
+        <option value="">KG모빌리티</option>
+      </select><br>
+      
+      <input type="radio" value="male" id="male" name="gender" class="changeTest">
+      <label for="male">남자</label>
+      <input type="radio" value="female" id="female" name="gender" class="changeTest"> 
+      <label for="female">여자</label>
+      <br>
+      <input type="checkbox" id="apple" class="changeTest">
+      <label for="apple">사과</label>
+      <input type="checkbox" id="banana" class="changeTest" checked>
+      <label for="banana">바나나</label>
+      <input type="checkbox" id="grape" class="changeTest">
+      <label for="grape">포도</label>
+      <br>
+
+
+      <input type="submit" id="submitBtn">
+      <input type="reset" id="resetBtn" >
+    </form>
+    
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />r><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />r><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />r><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
   <script>
@@ -120,5 +146,72 @@
         //     alert("focus 이벤트 발생")
         // })
         inputTag.focus();
+
+    // blur - 요소가 포커스를 잃었을 때(필수로 입력해야 할때)
+    // inputTag.addEventListener('blur', ()=>{
+    //         alert("blur 이벤트 발생")
+    //     })
+
+
+        //폼 이벤트
+        // input - input, teatarea 태그의 값이 변경되었을 때
+        //클래스로 요소 선택하기
+        // const classEl = document.getElementsByClassName("formEl")
+        const classEl =document.querySelectorAll(".formEl")
+        // console.log(typeof classEl);
+        // for(let i = 0; i < classEl.length; i++){
+        //   classEl[i].addEventListener('input', ()=>{
+        //     alert("input 이벤트 발생")
+        // })
+        // }
+        // console.log(classEl);
+        // classEl.forEach((el) => {
+        //    el.addEventListener('input', ()=>{
+        //     alert("input 이벤트 발생")
+        // })
+        // });
+
+        //change - 폼태그 안에서 선택한 태그를 변경 되었을 때 ( 선택상자, 체크박스, 라디오 버튼의 상태가 변경 되었을 때)
+
+        const changeEl = document.querySelectorAll(".changeTest")
+        changeEl.forEach(function(e) {
+          e.addEventListener("change", function() {
+            console.log(this);
+            // alert("change 이벤트 발생")
+          })
+        })
+
+        // submit, reset
+        const submitEl = document.getElementById("submitBtn")
+        const resetEl = document.getElementById("resetBtn")
+        const formEl = document.forms[0]; // HTML컬랙션이라는 오브젝트로 나오고 있음
+
+        console.log(formEl);
+        // console.log(reset);
+        formEl.addEventListener("submit", (e)=>{
+          e.preventDefault();
+          alert("submot 발생")
+
+
+          // formEl.submit();
+        }) 
+        formEl.addEventListener("reset", (e)=>{
+          alert("reset 발생")
+        })
+
+        // cut, copy, paste
+        const textareaEl = document.getElementById("textarea")
+        textareaEl.addEventListener('cut', ()=>{
+          alert("cut 이벤트 발생")
+        })
+
+        textareaEl.addEventListener("copy", ()=>{
+          alert("copy 이벤트 발생") 
+        })
+
+        textareaEl.addEventListener('paste', ()=>{
+          alert("paste 이벤트 발생")
+          // confirm("정말 붙여넣기 하시겠습니까?")
+        })
   </script>
 </html>

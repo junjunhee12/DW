@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li><span>List item1</span></li>
+      <li><span>List item2</span></li>
+      <li><span>List item3</span></li>
+      <li><span>List item4</span></li>
+      <li><span>List item5</span></li>
+    </ul>
+    <!-- <ul>
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+      <li>List item5</li>
+    </ul> -->
+  </body>
+  <script>
+    const list = document.getElementsByTagName("ul")[0];
+    const allitems = list.getElementsByTagName("li");
+    // console.log(allitems[0].lastcChild);
+    allitems[4].lastChild.style.color = "red";
+    allitems[2].previousSibling.previousSibling.style.color = "yellow";
+    allitems[2].nextSibling.nextSibling.style.color = "blue";
+    // const allitems = list.childNodes;
+
+    for (let i = 0, length = allitems.length; i < length; i++) {
+      //   alert(allitems[i].firstChild.data);
+      console.log(allitems[i].firstChild.EH);
+    }
+  </script>
+</html>
