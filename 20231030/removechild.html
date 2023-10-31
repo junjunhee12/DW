@@ -21,7 +21,8 @@
         console.log(child);
         //   let child = parent.firstChild;
 
-        parent.removeChild(child);
+        // parent.removeChild(child); // 대상의 자식이 지워짐
+        child.remove(); // 그 대상을 지움
       }
     }
   </script>

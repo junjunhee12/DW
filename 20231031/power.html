@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #wrapper {
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(135deg, gray, white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #won {
+        width: 250px;
+        height: 250px;
+        border: 5px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #icon {
+        filter: contrast(0%);
+      }
+      #icon.on {
+        filter: opacity(0.5) drop-shadow(0 0 0 red) saturate(1000%) blur(3px);
+      }
+      #icon:hover {
+        cursor: pointer;
+      }
+      #won.on {
+        border: 20px solid black;
+      }
+      /* #won {
+        border: 5px solid black;
+      } */
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="won" class="">
+        <iconify-icon
+          id="icon"
+          class="off"
+          icon="mdi:power"
+          width="200px"
+        ></iconify-icon>
+      </div>
+    </div>
+  </body>
+  <script>
+    const iconTag = document.querySelector("#icon");
+    const div = document.querySelector("#won");
+    console.log(iconTag);
+
+    iconTag.addEventListener("click", () => {
+      //   const curryrentClass = iconTag.classList;
+      //   if (curryrentClass == "off") {
+      //     iconTag.classList.remove("off");
+      //     iconTag.classList.add("on");
+      //     div.classList.remove("off");
+      //     div.classList.add("on");
+      //   } else {
+      //     iconTag.classList.remove("on");
+      //     iconTag.classList.add("off");
+      //     div.classList.remove("on");
+      //     div.classList.add("off");
+      //   }
+
+      iconTag.classList.toggle("on"); // 토글은 클래스가 있으면 빼주고 없으면 넣어준다.
+      div.classList.toggle("on");
+    });
+  </script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</html>
