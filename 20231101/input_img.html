@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>클릭하세요(이미지 추가)</button>
+    <!-- <img src="/resources/IMG/slide2.jpg" alt=""> -->
+  </body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    $("button").on("click", function () {
+      // alert("dd");
+      const imgArr = ["건물.jpg", "slide2.jpg", "강아지1.jpg", "강아지2.webp"];
+      const randNum = parseInt(Math.random() * 4);
+      const img = $(
+        `<img style ="border:2px solid red" width ="200px" height ="200px" src="/IMG/${imgArr[randNum]}"/>`
+      );
+      img.appendTo("body");
+    });
+  </script>
+</html>
