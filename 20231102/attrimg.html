@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://tjdaewoo.co.kr/">DW아카데미</a><br /><br />
+    <a href="mailto:kjy.devops@gmail.com">kjy에게 메일보내기</a><br /><br />
+    <div><label>Some images:</label></div>
+
+    <div>
+      <img src="/IMG/이미지1.jpg" id="img1" alt="" />
+      <img src="/IMG/이미지3.jpg" id="img3" title="mg2" alt="" />
+      <img src="/IMG/이미지4.jpg" id="img4" alt="" />
+      <img src"/IMG/이미지5.jpg" id="img5" alt="" />
+      <img src="/IMG/이미지6.jpg" id="img6" title="mg2" alt="" />
+      <img src="/IMG/이미지7.jpg" id="img7" alt="" />
+      <img src="/IMG/이미지2.webp" id="img2" alt="" />
+    </div>
+    <div id="someDiv">
+      이곳은 ID속성이 <tt>someDiv</tt>인 &lt;div&gt;태그 입니다.
+    </div>
+    <form>
+      <div>
+        <label>Text:</label>
+        <input type="text" id="aTextField" name="someTextField" />
+      </div>
+      <button type="submit" id="submitButton">Submit</button
+      ><input type="button" value="클릭~~" id="changeBtn" />
+    </form>
+  </body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    let isStyleChanged = false;
+    let originalStyles = {};
+
+    $("#changeBtn").on("click", function () {
+      // 만약 스타일이 변경되지 않은 경우
+      if (!isStyleChanged) {
+        // type이 button인 input요소의 배경색 변경
+        const button = $("input[type=button]");
+        originalStyles.button = button.attr("style");
+        button.css("background", "yellow");
+
+        // href가 mailto로 시작하는 a 요소의 스타일 변경
+        const a = $("a[href ^= mailto]");
+        originalStyles.a = a.attr("style");
+        a.css({
+          background: "yellow",
+          "text-decoration": "none",
+        });
+
+        // id가 img1인 것을 제외한 img요소의 테두리 변경
+        const img = $("img[id != img1]");
+        originalStyles.img = img.attr("style");
+        img.css("border", "2px solid blue");
+
+        // src가 webp로 끝나는 img 요소의 테두리 변경
+        const img_webp = $("img[src $= webp]");
+        originalStyles.img_webp = img_webp.attr("style");
+        img_webp.css("border", "2px solid red");
+
+        // title이 mg2인 img 요소의 테두리 변경
+        const img_yellow = $("img[title = mg2]");
+        originalStyles.img_yellow = img_yellow.attr("style");
+        img_yellow.css("border", "2px solid yellow");
+
+        isStyleChanged = true;
+      } else {
+        // 스타일을 원래 상태로 복원
+        const button = $("input[type=button]");
+        button.attr("style", originalStyles.button);
+
+        const a = $("a[href ^= mailto]");
+        a.attr("style", originalStyles.a);
+
+        const img = $("img[id != img1]");
+        img.attr("style", originalStyles.img);
+
+        const img_webp = $("img[src $= webp]");
+        img_webp.attr("style", originalStyles.img_webp);
+
+        const img_yellow = $("img[title = mg2]");
+        img_yellow.attr("style", originalStyles.img_yellow);
+
+        isStyleChanged = false;
+      }
+    });
+  </script>
+</html>
