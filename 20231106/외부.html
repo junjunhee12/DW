@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        cursor: pointer;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <p title="t">튜울립</p>
+    <p title="c">국화</p>
+    <p title="k">코알라</p>
+    <p title="h">수국</p>
+    <!-- <img src="/IMG/이미지1.jpg" alt="" /> -->
+  </body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    console.log($("p").next());
+    const imgArr = ["이미지1.jpg", "이미지5.jpg", "이미지3.jpg", "이미지4.jpg"];
+    $(function () {
+      $("p").on("click", function () {
+        const index = $(this).index();
+        //요소외부에 추가
+        $(this).after(`<img src = "/IMG/${imgArr[index]}"/>`);
+        $(`<img src = "/IMG/${imgArr[index]}"/>`).insertafter(this);
+      });
+    });
+  </script>
+</html>
