@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 2px solid blue;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="/IMG/이미지1.jpg" alt="강아지" />
+      <img src="/IMG/이미지2.webp" alt="" />
+      <img src="/IMG/이미지3.jpg" alt="" />
+      <img src="/IMG/이미지4.jpg" alt="" />
+      <img src="/IMG/이미지5.jpg" alt="" /><br />
+      <button onclick="changeTile()">눌러보세요</button>
+    </div>
+  </body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    function changeTile() {
+      // 1. 이미지 태그 전체 요소를 가져온다
+      const Img = $("img");
+      // 2. 전체 태그에 대한 반복문을 실행하여  title 에 src와 똑같은 값을 넣어준다.
+      Img.each((i, el) => {
+        // console.log(el);
+        $(el).attr("title", $(el).attr("src"));
+      });
+    }
+  </script>
+</html>
