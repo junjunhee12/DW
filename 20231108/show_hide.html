@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <p>hide 버튼을 누르면 화면에 나타납니다.</p>
+    <button id="hide">HIDE</button>
+    <button id="show">SHOW</button>
+    <button id="toggle">Toggle</button>
+    <!-- <div>안녕하세요</div> -->
+  </body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    $("#hide").on("click", function () {
+      // hide 함수
+      // $("p").hide(); // 기본형
+      //$("p").hide(2000); // 파라미터숫자
+      $("p").hide(2000, function () {
+        alert("없어졌다!!");
+      }); // 파라미터숫자
+    });
+    $("#show").on("click", function () {
+      // show 함수
+      //$("p").show(); //기본형
+      //$("p").show(2000); // 파라미터 숫자
+      $("p").show(200, function () {
+        alert("생겼다!!");
+      }); // 파라미터 숫자
+    });
+    $("#toggle").on("click", function () {
+      // $("p").toggle();
+      // $("p").toggle(2000);
+      $("p").toggle(2000, function () {
+        alert("토글 눌렀다!!");
+      });
+    });
+  </script>
+</html>

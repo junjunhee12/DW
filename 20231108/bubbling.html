@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body * {
+            margin: 20px;
+            border: 3px solid blue;
+        } */
+      form {
+        background-color: green;
+        position: relative;
+        width: 400px;
+        height: 400px;
+        text-align: center;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+      div {
+        background-color: blue;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 50px;
+        left: 50px;
+      }
+      p {
+        background-color: red;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 50px;
+        left: 50px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body onclick="alert('body태그 이벤트 핸들러')">
+    <!-- <div onclick="alert('div에 할당한 핸들러!!')" style="background-color: red">
+      <em style="background-color: yellow"
+        ><code>EM</code>을 클릭했는데도 <code>div</code>에 할당한 이벤트가
+        동작합니다.</em
+      >
+    </div> -->
+  </body>
+  <!-- <br><br><br><br><br><br><br>
+  <form>FORM
+    <div >DIV
+        <p >P</p>
+    </div>
+  </form>
+  </div> -->
+  <button onclick="event.stopPropagation()">클릭해주세요</button>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    // const form = document.forms[0];
+    // form.onclick=function(e){
+    //     this는 클릭앞에 대상이 this가 되는것이다. 여기서는 - form이 대상이다.
+    //     console.log(`target : ${e.target.tagName}, this : ${this.tagName}`);
+    //     alert(e.target)
+    // }
+    const btn = document.querySelector("button");
+    btn.addEventListener("click", function (event) {
+      alert("버튼클릭");
+      event.stopPropagation();
+    });
+    btn.addEventListener("click", function (event) {
+      alert("버튼클릭");
+    });
+  </script>
+</html>

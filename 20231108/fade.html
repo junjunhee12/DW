@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        display: none;
+      }
+      #div1 {
+        background-color: dodgerblue;
+      }
+      #div2 {
+        background-color: aqua;
+      }
+      #div3 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>FadeIn누르면 요소가 나타나고,FadeDut버튼을 누르면 요소가 사라집니다</p>
+    <button id="In">FadeIn</button>
+    <button id="Out">FadeOut</button>
+    <button id="Toggle">FadeToggle</button>
+    <button id="To">FadeTo</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+  </body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    $("#In").on("click", function () {
+      // fade() 함수는 투명도로 나타내고 움직이지 않는다.
+      $("#div1").fadeIn();
+      $("#div2").fadeIn("slow");
+      $("#div3").fadeIn(3000);
+    });
+    $("#Out").on("click", function () {
+      $("#div1").fadeOut();
+      $("#div2").fadeOut("slow");
+      $("#div3").fadeOut(3000);
+    });
+    $("#Toggle").on("click", function () {
+      $("#div1").fadeToggle(1000).animate({
+        backgroundcolor: "red",
+        width: " 300px",
+      });
+      $("#div2").fadeToggle(2000);
+      $("#div3").fadeToggle(3000);
+    });
+    $("#To").on("click", function () {
+      // fadeTo()함수 - (시간, 투명도 값)
+      $("#div1").fadeTo(1000, 0.15);
+      $("#div2").fadeTo(2000, 0.4);
+      $("#div3").fadeTo(3000, 0.7);
+    });
+  </script>
+</html>
