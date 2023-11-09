@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Authors</h1>
+    <ul id="authors"></ul>
+    <button id="loadMoreButton">Load More</button>
+  </body>
+  <script>
+    const url = "https://jsonplaceholder.typicode.com/users";
+    let data = [];
+    let currentIndex = 0;
+
+    function doAction() {
+      if (currentIndex < data.length) {
+        const ul = document.getElementById("authors");
+        const li = document.createElement("li");
+        li.innerHTML = `${data[currentIndex].name}, ${data[currentIndex].email}, ${data[currentIndex].address.city}`;
+        ul.appendChild(li);
+        currentIndex++;
+      }
+    }
+
+    function fetchData() {
+      fetch(url)
+        .then((response) => response.json())
+        .then((responseData) => {
+          data = responseData;
+          doAction(); // 페이지 로딩 시 첫 번째 항목을 표시
+        });
+    }
+
+    document
+      .getElementById("loadMoreButton")
+      .addEventListener("click", doAction);
+    fetchData(); // 페이지 로딩 시 데이터 가져오기
+  </script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="/resources/JS/jquery-3.6.4.js"></script>
+  <script>
+    const gift = ["하니", "해린", "민지", "다니엘", "진용"];
+
+    // ES5 문법
+    // const airMax = gift[0];
+    // const airpod = gift[1];
+    // const appleCoupon = gift[2];
+    // const etcCoupon1 = gift[3];
+    // const etcCoupon2 = gift[4];
+
+    // 구조분해 ES6
+    // 마지막은 기본값을 준것이다.
+    // const [airMax, airpod, appleCoupon, etcCoupon1, etcCoupon2 = "준희"] = gift;
+
+    const [airMax, airpod, appleCoupon, ...etcCoupon1] = gift;
+    console.log(airMax, airpod, appleCoupon, etcCoupon1);
+
+    const obj = {
+      name: "홍길동",
+      age: 20,
+      address: "대전광역시 중구 선화동",
+      weight: "70kg",
+      height: "190cm",
+    };
+    // const name = obj.name
+    // const age = obj.age
+    // const address = obj.address
+
+    const { name, age, address: addr, tel = "010-1234-5678", ...etc } = obj;
+    console.log(name, age, addr, tel, etc);
+  </script>
+</html>
