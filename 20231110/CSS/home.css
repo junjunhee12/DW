@@ -37,6 +37,7 @@
   background-color: #fff;
   cursor: pointer;
   display: inline-flex;
+  align-items: center;
   padding: 8px 24px;
   gap: 24px;
   border-radius: 8px;
@@ -122,15 +123,44 @@
   width: 105px;
 }
 
+.remove-icon {
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (max-width: 944px) {
   .container {
+    width: 100%;
     flex-direction: column;
+    margin: 0;
+    padding: 24px 16px;
+    gap: 24px;
   }
+  /* /* .header-container {
+    position: sticky;
+    top: 24px;
+    z-index: 1;
+  } */
   .header {
     padding: 32px;
     text-align: center;
     border-radius: 40px;
   }
+  */
+  /* .header {
+    position: fixed;
+    top: 24px;
+
+    left: 0;
+
+    right: 0;
+    /* z-index: 999;
+    padding: 32px;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #f5f7fb; */
+  */
+  /* } */
   .header > h1 {
     font-size: 24px;
   }
@@ -138,5 +168,29 @@
   .filter {
     padding: 4px 8px;
     gap: 8px;
+  }
+
+  .add-item {
+    padding: 20px 24px;
+  }
+  .item {
+    padding: 18px 16px;
+  }
+
+  .item-id {
+    width: 37px;
+    margin-right: 16px;
+  }
+
+  .item-mbti {
+    width: 54px;
+    margin-right: 16px;
+  }
+
+  .item-color-code {
+    width: 72px;
+  }
+  .item-color-chip {
+    margin-right: 8px;
   }
 }
