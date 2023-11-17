@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > h1 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding-left: 16px;
+}
+.container > h1 > a {
+  color: white;
+}
+header {
+  background-color: #424242;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+#header-menu {
+  text-align: center;
+  width: 100%;
+}
+
+#gnb {
+  width: 100%;
+}
+
+#gnb > ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* #gnb > ul:nth-child(1){
+    transition: all 200ms linear;
+} */
+
+.g-main {
+  width: 150px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: center;
+  /* text-align: right; */
+}
+
+.g-main > a {
+  width: 150px;
+  color: white;
+  /* flex-grow: 0; */
+}
+/* .g-main:hover .g-sub{
+    
+    transform: translateY(10px);
+    display: initial;
+    z-index: 99;
+}
+.g-sub{
+    transition: 0.5s linear;
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 159px;
+    top: 40px;
+    right: 130px ;
+    background-color: #333333;
+    transform: translateY(0);
+} */
+
+.g-main:hover .g-sub {
+  transform: translateY(10px);
+  /* display: block; */
+  opacity: 1;
+  z-index: 99;
+}
+
+.g-sub {
+  transition: 0.5s linear;
+  /* display: none; */
+  position: absolute;
+  width: 200px;
+  height: 159px;
+  top: 40px;
+  /* right: 130px; */
+  background-color: #333333;
+  transform: translateY(0);
+  opacity: 0;
+  z-index: -10;
+}
+
+.g-sub > li {
+  width: 100%;
+  /* height: 100%; */
+  padding: 1rem 0;
+  display: flex;
+  position: relative;
+}
+
+.g-sub > li > a {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+/*  */
+.g-sub-item::before,
+.g-sub-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.g-sub-item::after {
+  bottom: 0;
+  height: 0;
+  background-color: dodgerblue;
+}
+
+.g-sub-item:hover::after {
+  height: 4px;
+  z-index: -100;
+}
+
+/*  */
+.l-main {
+  width: 150px;
+  text-align: center;
+  position: relative;
+  padding: 1rem 0;
+  /* text-align: right; */
+  /* display: none; */
+  /* margin-bottom: 10px; */
+}
+
+.l-main > a {
+  color: white;
+}
+#lnb {
+  width: 100%;
+  transition: all 0.5s linear;
+}
+
+#lnb:hover .l-sub {
+  display: flex;
+  opacity: 1;
+  transform: translateY(1px);
+  z-index: 2;
+}
+
+#lnb > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.l-sub {
+  /* border: 1px solid black; */
+  transition: all 0.5s linear;
+  background-color: #eee;
+  position: absolute;
+  bottom: -200px;
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  transform: translateY(0);
+  /* display: none; */
+  opacity: 0;
+  z-index: -1;
+}
+
+.l-sub > li {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.l-sub > li:hover a {
+  background-color: black;
+  color: white;
+}
+
+.l-sub > li:last-child {
+  border-bottom: none;
+}
+
+.l-sub > li > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  메인  */
+main {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/IMG/이미지6.jpg") center center;
+  background-size: cover;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}

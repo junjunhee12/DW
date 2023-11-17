@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/20231115/about.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>
+          <a href="index.html"> Jun's Portfolio </a>
+        </h1>
+        <div id="header-menu">
+          <nav id="gnb">
+            <ul>
+              <li class="g-main">
+                <a href="#">Language</a>
+                <ul class="g-sub">
+                  <li><a class="g-sub-item" href="#">한국어</a></li>
+                  <li><a class="g-sub-item" href="#">영어</a></li>
+                  <li><a class="g-sub-item" href="#">일본어</a></li>
+                </ul>
+              </li>
+              <li class="g-main">
+                <a href="#">로그인</a>
+              </li>
+              <li class="g-main">
+                <a href="#">사이트맵</a>
+              </li>
+            </ul>
+          </nav>
+          <nav id="lnb">
+            <ul>
+              <li class="l-main">
+                <a href="#">Biography</a>
+                <ul class="l-sub">
+                  <li><a href="#">Lorem.</a></li>
+                  <li><a href="#">Lorem, ipsum.</a></li>
+                  <li><a href="#">Lorem, ipsum. Lorem</a></li>
+                </ul>
+              </li>
+              <li class="l-main">
+                <a href="#">Works</a>
+                <ul class="l-sub">
+                  <li><a href="#">Lorem.</a></li>
+                  <li><a href="#">Lorem, ipsum.</a></li>
+                  <li><a href="#">Lorem, ipsum. Lorem</a></li>
+                </ul>
+              </li>
+              <li class="l-main">
+                <a href="#">Blog</a>
+                <ul class="l-sub">
+                  <li><a href="#">Lorem.</a></li>
+                  <li><a href="#">Lorem, ipsum.</a></li>
+                  <li><a href="#">Lorem, ipsum. Lorem</a></li>
+                </ul>
+              </li>
+              <li class="l-main">
+                <a href="#">contact</a>
+                <ul class="l-sub l-sub2"></ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-container">
+        <h4>Welcome</h4>
+        <h2>I'M A<span></span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          dolor quas nulla unde ea officiis?
+        </p>
+        <button class="download">DOWNLOAD CV</button>
+        <button class="mouse">
+          <i class="fa-solid fa-computer-mouse"></i>
+        </button>
+      </div>
+    </main>
+
+    <script src="/resources/JS/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+        const Front = $(".main-container > h2 > span");
+        const txtArr = [
+          " Web Publisher",
+          " Front-End Developer",
+          " Web UX Designer",
+          " UX Designer",
+          " Back-END Developer",
+        ];
+
+        let index = 0;
+        let currentTxt = txtArr[index].split("");
+
+        function writeTxt() {
+          Front.text(Front.text() + currentTxt.shift());
+          if (currentTxt.length !== 0) {
+            setTimeout(writeTxt, Math.floor(Math.random() * 100));
+          } else {
+            currentTxt = Front.text().split("");
+            setTimeout(deleteTxt, 3000);
+          }
+        }
+
+        function deleteTxt() {
+          currentTxt.pop();
+          Front.text(currentTxt.join(""));
+          if (currentTxt.length !== 0) {
+            setTimeout(deleteTxt, Math.floor(Math.random() * 100));
+          } else {
+            index = (index + 1) % txtArr.length;
+            currentTxt = txtArr[index].split("");
+            writeTxt();
+          }
+        }
+        writeTxt();
+      });
+    </script>
+  </body>
+</html>
