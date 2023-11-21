@@ -1,0 +1,157 @@
+/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Pretendard;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  perspective: 1100px;
+  margin: 2rem;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: .4s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.front {
+  background-color: dodgerblue;
+}
+
+.back {
+  background-color: tomato;
+  transform: rotateY(180deg);
+}
+
+.card:hover .wrap {
+  transform: rotateY(180deg);
+} */
+
+/*  dddddddddddddddddddd */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Pretendard;
+}
+
+.filp {
+  width: 400px;
+  height: 450px;
+  position: relative;
+  perspective: 1100px;
+  margin: 2rem;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.front {
+  background-color: dodgerblue;
+}
+.front > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.back {
+  background-color: tomato;
+  transform: rotateY(180deg);
+}
+
+.filp:hover .wrap {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.card-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+}
+
+.card-wrap > h2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  /* padding-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-wrap > h2 > .h2-wrap > img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+.card-wrap > h2 > .h2-wrap {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+/* .card-wrap > h2 > .h2-wrap > p{
+  display: flex;
+  flex-direction: column;
+} */
+
+.card-wrap > p {
+  padding-bottom: 1rem;
+}
