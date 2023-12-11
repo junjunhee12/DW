@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/20231130/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul class="gallery">
+        <li style="background-color: #f6bd60"></li>
+        <li style="background-color: #f7ede2"></li>
+        <li style="background-color: #f5cac3"></li>
+        <li style="background-color: #84a59d"></li>
+        <li style="background-color: #f28482"></li>
+        <li style="background-color: #f28482"></li>
+        <li style="background-color: #f28482"></li>
+        <li style="background-color: #f28482"></li>
+        <li style="background-color: #f28482"></li>
+        <li style="background-color: #f28482"></li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <script>
+    const slider = document.querySelector(".gallery");
+    let startX = 0;
+    let scrollLeft = 0;
+    const SCROLL_SPEED = 5;
+    function doScroll(e) {
+      e.preventDefault();
+      const x = e.pageX;
+      const move = (x - startX) * SCROLL_SPEED;
+      slider.scrollLeft = scrollLeft - move;
+    }
+
+    slider.addEventListener("mousedown", (e) => {
+      slider.addEventListener("mousemove", doScroll);
+      slider.classList.add("onDrag");
+      startX = e.pageX;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener("mouseup", () => {
+      slider.removeEventListener("mousemove", doScroll);
+      slider.classList.remove("onDrag");
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      slider.removeEventListener("mousemove", doScroll);
+      slider.classList.remove("onDrag");
+    });
+  </script>
+</html>

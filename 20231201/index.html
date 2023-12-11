@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/20231201/index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h4>Enter OTP</h4>
+      <form action="#">
+        <div class="input-field">
+          <input type="number" />
+          <input type="number" disabled />
+          <input type="number" disabled />
+          <input type="number" disabled />
+        </div>
+        <button>Verify OTP</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    const inputs = document.querySelectorAll("input");
+    const button = document.querySelector("button");
+
+    // 로딩시점에 첫번째 input 요소 focus
+    window.addEventListener("load", () => inputs[0].focus());
+
+    inputs.forEach((input, index1) => {
+      input.addEventListener("keyup", (e) => {
+        const currentInput = input;
+        const prevInut = input.previousElementSibling;
+        const nextInput = input.nextElementSibling;
+
+        if (
+          // 다음이 널이 아니고
+          nextInput &&
+          nextInput.hasAttribute("disabled") &&
+          // 입력했는지 확인
+          currentInput.value !== ""
+        ) {
+          nextInput.removeAttribute("disabled");
+          nextInput.focus();
+        }
+        if (currentInput.value.length > 1) {
+          currentInput.value = "";
+          // 여기까지만 하고 아래쪽으로 더이상 하지말라는 것
+          return;
+        }
+
+        // 백스페이스로 지우는 로직 구현
+        if (e.key == "Backspace") {
+          inputs.forEach((input, index2) => {
+            // 백스페이스키가 입력된 input값과 같거나 오른쪽에 있으면 아래코드 실행
+            // 값을 지우고 + disabled 상태로 전환 + 왼쪽으로 이동
+            if (index1 <= index2) {
+              input.setAttribute("disabled", true); // disabled 속성 추가
+              input.value = "";
+              if (prevInut) {
+                prevInut.focus();
+              }
+            }
+            // 제일 왼쪽에 있는 input은 disabled되면 안됨
+            if (index1 == 0) {
+              inputs[0].removeAttribute("disabled");
+              inputs[0].focus();
+            }
+          });
+        }
+
+        if (
+          !inputs[inputs.length - 1].hasAttribute("disabled") &&
+          inputs[inputs.length - 1].value !== ""
+        ) {
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+        }
+      });
+    });
+  </script>
+</html>

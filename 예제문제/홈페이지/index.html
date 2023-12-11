@@ -1,163 +1,38 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="bighead">
-        <header class="header head">
-            <ul class="header-site">
-                <li class="header-site-item">
-                    <a href="#">인천국제공항</a>
-                </li>
-                <li class="header-site-item">
-                    <a href="#">인천국제공항항공사</a>
-                </li>
-            </ul>
-            <div class="header-util">
-                <ul class="header-util-cs">
-                    <li class="header-util-cs-item">
-                        <a href="#" id="fnlogin">로그인</a>
-                    </li>
-                    <li class="header-util-cs-item">
-                        <a href="#">회원가입</a>
-                    </li>
-                    <li class="header-util-cs-item">
-                        <a href="#">고객센터</a>
-                    </li>
-                    <li class="header-util-cs-item">
-                        <a href="#">사이트맵</a>
-                    </li>
-                </ul>
-            </div>
-            <h1 class="header-logo">
-                <a href="#"> <!--<i class="fa-solid fa-rocket fa-spin"></i> -->Incheon Airport</a>
-            </h1>
-        </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
 
-        <!-- 드랍다운 영역 -->
-        <nav class="dropdown head">
-            <ul class="dropdown-dep1">
-                <li class="dropdown-dep1-item">
-                    <a href="#">출발</a>
-                    <ul class="dropdown-dep2">
-                        <li class="dropdown-dep2-item">
-                            <a href="#">출발시간</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">출국절차</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">축국체크사항</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">코로나19안내</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">취항정보</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown-dep1-item">
-                    <a href="#">도착</a>
-                    <ul class="dropdown-dep2">
-                        <li class="dropdown-dep2-item">
-                            <a href="#">도착시간</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">입국절차</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">환영안내</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown-dep1-item">
-                    <a href="#">환승</a>
-                    <ul class="dropdown-dep2">
-                        <li class="dropdown-dep2-item">
-                            <a href="#">환승안내</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">환승편의시설</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">환승투어</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">k-스탑오버</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown-dep1-item">
-                    <a href="#">교통·주차</a>
-                    <ul class="dropdown-dep2">
-                        <li class="dropdown-dep2-item">
-                            <a href="#">오시는길</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">주차안내</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">대중교통</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">공항셔틀버스</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">렌터카</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">카셰어링</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown-dep1-item">
-                    <a href="#">쇼핑·식당</a>
-                    <ul class="dropdown-dep2">
-                        <li class="dropdown-dep2-item">
-                            <a href="#">면세점쇼핑</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">일반쇼핑</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">식당</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">이벤트</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown-dep1-item">
-                    <a href="#">안내·서비스</a>
-                    <ul class="dropdown-dep2">
-                        <li class="dropdown-dep2-item">
-                            <a href="#">터미널 안내</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">공항지도</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">안내·편의시설</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">전시·공연·체험</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">맞춤형 서비스</a>
-                        </li>
-                        <li class="dropdown-dep2-item">
-                            <a href="#">고객센터</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+      .marquee {
+        position: absolute;
+        white-space: nowrap;
+        color: white;
+        font-size: 24px;
+        animation: marquee 10s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee">
+      This is a scrolling marquee text. This is a scrolling marquee text. This
+      is a scrolling marquee text.
     </div>
-</body>
+  </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/20231129/modal.css" />
+  </head>
+  <body>
+    <div id="box" class="box" onclick="{onClick()}">
+      <img class="img" src="https://picsum.photos/id/127/300/200" />
+      <div id="text" class="text">
+        <h2>사진제목</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          posuere quis sem eget efficitur. Vestibulum posuere sed dui nec
+          sagittis. Vestibulum fringilla dignissim eros, at aliquam eros
+          elementum scelerisque. Sed viverra tempus enim nec scelerisque. Cras
+          rutrum tincidunt pretium.
+        </p>
+      </div>
+    </div>
+    <div class="overlay" onclick="{onClick()}"></div>
+  </body>
+  <script>
+    const box = document.querySelector(".box");
+    const text = document.querySelector(".text");
+    const overlay = document.querySelector(".overlay");
+    // 모달창이 열려있는지 여부를 저장하는 전역변수
+    let isModalOpen = false;
+
+    function onClick() {
+      if (isModalOpen) {
+        isModalOpen = false;
+        box.classList.remove("modal");
+        text.classList.remove("visible");
+      } else {
+        isModalOpen = true;
+        box.classList.add("modal");
+        setTimeout(() => {
+          text.classList.add("visible");
+        }, 500);
+      }
+    }
+  </script>
+</html>
