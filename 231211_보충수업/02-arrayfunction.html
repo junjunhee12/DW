@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 1. forEach
+    const arr = [10, 20, 30, 40, 50];
+    let sum = 0;
+    arr.forEach((e, dex, arr1) => {
+      sum += e;
+    });
+    // console.log(sum);
+
+    // 2. map => 새로운 배열을 만들어서 반환을 해주는 것이다.
+    // [30,60,90,120,150]
+
+    // const newArr = [];
+    // arr.forEach((v) => {
+    //   newArr.push(v * 3);
+    // });
+    // console.log(newArr);
+
+    const newArr = arr.map((v) => v * 3);
+
+    const objArr = [
+      { id: 1, name: "홍길동" },
+      { id: 2, name: "진달래" },
+      { id: 3, name: "임꺽정" },
+    ];
+
+    const newName = objArr.map((v) => {
+      return v.name;
+    });
+    // console.log(newName);
+
+    // 3. reduce => 하나의 단일값만 반환한다.
+    // const Arrsum = arr.reduce((prevValue, curValue, curIdx, array) => {
+    //   //   console.log(
+    //   //     `prevValue: ${prevValue}, curValue: ${curValue}, curIdx: ${curIdx}, array: ${array}`
+    //   //   );
+    //   return prevValue + curValue;
+    // });
+    // console.log(Arrsum);
+
+    const arrSum = arr.reduce((a, b) => a + b, 1);
+    console.log(arrSum);
+  </script>
+</html>
