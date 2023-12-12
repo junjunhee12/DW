@@ -1,8 +1,12 @@
-import HandIcon from "./handIcon";
+import HandIcon from "./HandIcon";
 
-function HandButton({ onClick, value }) {
+function HandButton({ value, onClick }) {
+  const handleClick = () => {
+    onClick(value);
+  };
+
   return (
-    <button onClick={onClick}>
+    <button onClick={handleClick}>
       <HandIcon value={value} />
     </button>
   );
