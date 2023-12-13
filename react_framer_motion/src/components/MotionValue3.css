@@ -6,10 +6,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .container {
   width: 100vw;
   height: 100vh;
 }
+
 .box {
   background-color: white;
   border-radius: 30px;

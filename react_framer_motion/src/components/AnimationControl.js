@@ -1,17 +1,14 @@
 import "./AnimationControl.css";
 import { motion, useAnimationControls } from "framer-motion";
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
 const hoverVariants = {
-  initial: { width: "20%", opacity: 0.5 },
-  hover: { width: "28%", opacity: 1 },
+  initial: { width: "20%" },
+  hover: { width: "28%" },
 };
-
 export function AnimationControl() {
   const control = useAnimationControls();
   // 초기화 코드
-  // useEffect 후크의 두번째 파라미터(배열)이 빈 배열이면
-  // 해당 컴포넌트의 첫번째 렌더링 시점에만 한번 실행됨!!!
+  // useEffect 후크의 두번째 파라미터(배열)이 빈 배열이면 해당 컴포넌트의 첫번재 랜더링 시점에만 한번 실행됨
   useEffect(() => {
     control.start("hover");
   }, []);
@@ -22,9 +19,9 @@ export function AnimationControl() {
           className="box box1"
           variants={hoverVariants}
           initial="initial"
+          whileHover="hover"
           transition={{ duration: 0.3, type: "tween" }}
           animate={control}
-          onMouseEnter={() => control.start("hover")}
         />
         <motion.div
           className="box box2"
