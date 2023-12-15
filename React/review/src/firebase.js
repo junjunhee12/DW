@@ -19,19 +19,12 @@ import {
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
 
 const firebaseConfig = {
-  // apiKey: "AIzaSyA2DdInAeLGCLX0Tr2Ndl_VeCzcSCPMbqg",
-  // authDomain: "project0304-24910.firebaseapp.com",
-  // projectId: "project0304-24910",
-  // storageBucket: "project0304-24910.appspot.com",
-  // messagingSenderId: "673730811021",
-  // appId: "1:673730811021:web:8df4399142109e6b943ec4",
-
-  apiKey: "AIzaSyAiEJMrrT3KxhDALd0ZycM9d9aNI3GgkQg",
-  authDomain: "project0304-dd513.firebaseapp.com",
-  projectId: "project0304-dd513",
-  storageBucket: "project0304-dd513.appspot.com",
-  messagingSenderId: "205045376537",
-  appId: "1:205045376537:web:4c1fd391fc614eb5b5ac88",
+  apiKey: "AIzaSyAjeUmClsxyPZ0wuPKH9nyCXHiqd_P1Voo",
+  authDomain: "project-b0193.firebaseapp.com",
+  projectId: "project-b0193",
+  storageBucket: "project-b0193.appspot.com",
+  messagingSenderId: "737057507941",
+  appId: "1:737057507941:web:1ec506e63a85339b17548c",
 };
 
 // Initialize Firebase
