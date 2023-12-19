@@ -1,51 +1,51 @@
 import { useState } from "react";
+import FileInput from "./FileInput";
+import RatingInput from "./RatingInput";
 
-const ReviewForm = () => {
-  //   const [title, setTitle] = useState("");
-  //   const [rating, setRating] = useState(0);
-  //   const [content, setContent] = useState("");
-  const [value, setValue] = useState({
+function ReviewForm() {
+  const [values, setValues] = useState({
     title: "",
     rating: 0,
     content: "",
+    imgUrl: null,
   });
 
-  //   const handleTitleChange = (e) => {
-  //     setTitle(e.target.value);
-  //   };
-  //   const handleRatingChange = (e) => {
-  //     setRating(Number(e.target.value));
-  //   };
-  //   const handleContentChange = (e) => {
-  //     setContent(e.target.value);
-  //   };
-  const handleChange = (e) => {
+  const handleChange = (name, value) => {
+    setValues((prevValues) => ({ ...prevValues, [name]: value }));
+  };
+
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setValue();
+    handleChange(name, value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <form className="ReviewForm" onSubmit={handleSubmit}>
-      <input type="file" accept="image/png, image/jpeg"></input>
+      <FileInput name="imgUrl" value={values.imgUrl} onChange={handleChange} />
       <input
         type="text"
         name="title"
-        value={value.title}
-        onChange={handleChange}
-      ></input>
-      <input
-        type="text"
+        value={values.title}
+        onChange={handleInputChange}
+      />
+      <RatingInput
+        type="number"
         name="rating"
-        value={value.rating}
+        value={values.rating}
         onChange={handleChange}
-      ></input>
-      <textarea name="content" value={value.content} onChange={handleChange} />
+      />
+      <textarea
+        name="content"
+        value={values.content}
+        onChange={handleInputChange}
+      />
       <button type="submit">확인</button>
     </form>
   );
-};
+}
 
 export default ReviewForm;

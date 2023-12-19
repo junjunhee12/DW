@@ -2,12 +2,10 @@ import "./ReviewList.css";
 
 function formatDate(value) {
   const date = new Date(value);
-  console.log(date);
   return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}`;
 }
 
-//  이미지 아이템들에 대한 관리
-function ReviewlistItem({ item, onDelete }) {
+function ReviewListItem({ item, onDelete }) {
   const handleDeleteClick = () => onDelete(item.id);
   return (
     <div className="ReviewListItem">
@@ -23,14 +21,13 @@ function ReviewlistItem({ item, onDelete }) {
   );
 }
 
-// 전체 관리
-function Reviewlist({ items, onDelete }) {
+function ReviewList({ items, onDelete }) {
   return (
     <ul>
       {items.map((item) => {
         return (
           <li key={item.id}>
-            <ReviewlistItem item={item} onDelete={onDelete} />
+            <ReviewListItem item={item} onDelete={onDelete} />
           </li>
         );
       })}
@@ -38,4 +35,4 @@ function Reviewlist({ items, onDelete }) {
   );
 }
 
-export default Reviewlist;
+export default ReviewList;
