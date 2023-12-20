@@ -15,7 +15,15 @@ import {
   orderBy,
   limit,
   startAfter,
+  exists,
 } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
+import {
+  getStorage,
+  ref,
+  uploadBytes,
+  getDownloadURL,
+} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js";
+
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
 
 const firebaseConfig = {
@@ -64,10 +72,67 @@ async function getDatas(collectionName, options) {
   const result = querySnapshot.docs;
   const lastQuery = result[result.length - 1];
   // console.log(lastQuery);
-  const reviews = result.map((doc) => doc.data());
+
+  // 아래 스프레드 문법을 풀어주면 그 아래에 있는 주석부분하고 똑같다.
+  const reviews = result.map((doc) => ({ docId: doc.id, ...doc.data() }));
+  // const reviews = result.map((doc) => {
+  //   const obj = doc.data();
+  //   obj.docId = doc.id;
+  //   return obj;
+  // });
   return { reviews, lastQuery };
 }
 
+async function deleteDatas(collectionName, docId) {
+  await deleteDoc(doc(db, collectionName, docId));
+}
+
+async function addDatas(collectionName, formData) {
+  // 국제적으로 쓰는 유니크한 값 - 128자로 구성
+  const uuid = crypto.randomUUID();
+  const path = `movie/${uuid}`;
+  const lastId = (await getLastId(collectionName)) + 1;
+  const time = new Date().getTime();
+  // 파일을 저장하고 url를 받아온다.
+  const url = await uploadImage(path, formData.imgUrl);
+
+  formData.id = lastId;
+  formData.createdAt = time;
+  formData.updatedAt = time;
+  formData.imgUrl = url;
+
+  // formData.imgUrl = 받아온 url
+  const result = await addDoc(collection(db, collectionName), formData);
+  const docSnap = await getDoc(result);
+  if (docSnap.exists()) {
+    const review = { docId: docSnap.id, ...docSnap.data() };
+    return { review };
+  }
+}
+
+async function uploadImage(path, imgFile) {
+  const storage = getStorage();
+  const imageRef = ref(storage, path);
+
+  // file 객체를 스토리지에 저장
+  await uploadBytes(imageRef, imgFile);
+
+  // 저장한 File 의 url을 받아온다.
+  const url = await getDownloadURL(imageRef);
+  return url;
+}
+
+async function getLastId(collectionName) {
+  const docQuery = query(
+    collection(db, collectionName),
+    orderBy("id", "desc"),
+    limit(1)
+  );
+
+  const lastDoc = await getDocs(docQuery);
+  const lastId = lastDoc.docs[0].data().id;
+  return lastId;
+}
 // 내보내기
 export {
   db,
@@ -79,4 +144,6 @@ export {
   doc,
   deleteDoc,
   updateDoc,
+  addDatas,
+  deleteDatas,
 };

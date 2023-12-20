@@ -39,6 +39,7 @@ async function getDatas(collectionName) {
 async function addDatas(collectionName, dataobj) {
   // 문서ID 부여
   //   await setDoc(doc(db, "member", "member1"), dataobj);
+
   //   문서ID 자동
   await addDoc(collection(db, collectionName), dataobj);
 }

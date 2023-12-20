@@ -1,14 +1,15 @@
 import { useState } from "react";
 import FileInput from "./FileInput";
 import RatingInput from "./RatingInput";
+const INITAL_VALUES = {
+  title: "",
+  rating: 0,
+  content: "",
+  imgUrl: null,
+};
 
-function ReviewForm() {
-  const [values, setValues] = useState({
-    title: "",
-    rating: 0,
-    content: "",
-    imgUrl: null,
-  });
+function ReviewForm({ onSubmit, onSubmitSuccess }) {
+  const [values, setValues] = useState(INITAL_VALUES);
 
   const handleChange = (name, value) => {
     setValues((prevValues) => ({ ...prevValues, [name]: value }));
@@ -19,8 +20,18 @@ function ReviewForm() {
     handleChange(name, value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const { review } = await onSubmit("movie", values);
+      onSubmitSuccess(review);
+    } catch (error) {
+      return;
+    } finally {
+    }
+
+    setValues(INITAL_VALUES);
   };
 
   return (
