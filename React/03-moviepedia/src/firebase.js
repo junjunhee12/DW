@@ -51,7 +51,12 @@ async function getDatas(collectionName, options) {
   // console.error();
   // const querySnapshot = await getDocs(collection(db, collectionName));
   let docQuery;
-  if (options.lq === undefined) {
+  if (options === undefined) {
+    const querySnapshot = await getDocs(collection(db, collectionName))
+    const result = querySnapshot.docs.map((doc) => ({ docId: doc.id, ...doc.data() }))
+    return result
+  }
+  else if (options.lq === undefined) {
     docQuery = query(
       collection(db, collectionName),
       orderBy(options.order, "desc"),
